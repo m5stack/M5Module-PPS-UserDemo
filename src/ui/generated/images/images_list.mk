@@ -1,0 +1,1 @@
+GEN_CSRCS += _bk_alpha_320x240.c _numberSelected_alpha_18x5.c _output_disabled_alpha_52x52.c _cc_alpha_52x42.c _output_enable_alpha_52x52.c _cv_alpha_52x42.c _output_off_alpha_94x26.c _output_on_alpha_94x26.c _bk0_alpha_320x240.c _menu_status_0_alpha_320x48.c _menu_status_5_alpha_320x48.c _loud_alpha_72x20.c _mute_alpha_72x18.c _output_none_alpha_94x26.c
