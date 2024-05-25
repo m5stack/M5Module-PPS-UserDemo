@@ -209,7 +209,7 @@ static uint32_t keypad_get_key(void)
         else if (output_flag == 1) {
             if (M5.BtnA.wasClicked()) {
                 beep();
-                return 6;
+                return 1; // next (instead of on / off)
             }
             if (M5.BtnB.wasClicked()) {
                 beep();
@@ -234,7 +234,7 @@ static uint32_t keypad_get_key(void)
                 if (M5.BtnB.isHolding()) {
                     beep();
                     btnB_lock_flag = 1;
-                    return 1;
+                    return 7; // mute (instead of next)
                 }
             }
             else {
