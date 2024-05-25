@@ -758,8 +758,14 @@ void set_output(void)
 		lv_obj_clear_flag(guider_ui.screen_running_img_output_enable, LV_OBJ_FLAG_HIDDEN);	
 		lv_obj_clear_flag(guider_ui.screen_running_img_5, LV_OBJ_FLAG_HIDDEN);
 		lv_obj_add_flag(guider_ui.screen_running_img_1, LV_OBJ_FLAG_HIDDEN);
-		lv_obj_add_flag(guider_ui.screen_running_img_loud, LV_OBJ_FLAG_HIDDEN);
-		lv_obj_add_flag(guider_ui.screen_running_img_mute, LV_OBJ_FLAG_HIDDEN);		
+		if (!voice_flag) {
+			lv_obj_add_flag(guider_ui.screen_running_img_mute, LV_OBJ_FLAG_HIDDEN);
+			lv_obj_clear_flag(guider_ui.screen_running_img_loud, LV_OBJ_FLAG_HIDDEN);
+		}
+		else {
+			lv_obj_add_flag(guider_ui.screen_running_img_loud, LV_OBJ_FLAG_HIDDEN);
+			lv_obj_clear_flag(guider_ui.screen_running_img_mute, LV_OBJ_FLAG_HIDDEN);
+		}
 		pps.setPowerEnable(true);		
 	}
 }
