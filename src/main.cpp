@@ -15,7 +15,8 @@ void setup() {
   {
     M5.Display.startWrite();
     M5.Display.setTextColor(RED);
-    M5.Display.drawCenterString("No I2C Dev!!!", M5.Display.width()/2, M5.Display.height()/2, &Font4);
+    M5.Display.drawCenterString("No I2C Dev!!!", M5.Display.width()/2, M5.Display.height()/2 - 12, &Font4);
+    M5.Display.drawCenterString("Ext. DC power required!!!", M5.Display.width()/2, M5.Display.height()/2 + 12, &Font4);
     M5.Display.endWrite();
     delay(100);
   }
